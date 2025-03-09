@@ -1,0 +1,40 @@
+Time: Sun Mar 9 00:59:11 PST 2025
+USER DETAILS: orel:x:1000:1000:,,,:/home/orel:/bin/bash
+REPO: /mnt/c/Users/Orel/Desktop/projects/gadiShor/final Project
+GithubUrl: https://github.com/TwitOrel/Final-Project-With-Gadi.git
+VERSIONID: 24.04
+-------------------------------------------
+/mnt/c/Users/Orel/Desktop/projects/gadiShor/final Project
+├── LINUX_Course_Project
+│   ├── BACKUPS
+│   ├── CODE
+│   │   ├── plant.py
+│   │   └── py1.py
+│   ├── DATA
+│   │   ├── FIle_1.txt
+│   │   ├── File_2.txt
+│   │   ├── img1.jpg
+│   │   ├── img2.jpg
+│   │   ├── img3.jpg
+│   │   └── plants.csv
+│   ├── DOWNLOADS
+│   │   └── LINUX_COURSE_WORK-downloads
+│   │       ├── FIle_1.txt
+│   │       ├── File_2.txt
+│   │       ├── img1.jpg
+│   │       ├── img2.jpg
+│   │       ├── img3.jpg
+│   │       ├── plant.py
+│   │       ├── plants.csv
+│   │       └── py1.py
+│   └── Work
+│       ├── Q1
+│       │   └── q1_output.txt
+│       ├── Q2
+│       ├── Q3
+│       └── Q4
+└── ReadMe.txt
+
+12 directories, 18 files
+-------------------------------------------
+/home/orel/papi/papush.sh
