@@ -1,0 +1,32 @@
+1  git checkout -b BR_Q2
+2  cd LINUX_Course_Project/
+3  mkdir Work/Q2/ -p
+4  cp CODE/plant.py Work/Q2/
+5  cd Work/Q2
+6  python -m venv venv
+7  source ./venv/bin/activate
+8  pip install matplotlib
+9  python plant.py 
+10  mkdir Diagrams_1
+11  mv Rose* Diagrams_1/
+12  mkdir ../../BACKUPS
+13  tar -czvf "../../BACKUPS/diagrams_1_$(date +"%Y-%m-%d_%H-%M-%S").tar.gz" Diagrams_1/*.png
+14  cd ../..
+15  git add .
+16  git commit -m "q2 first commit"
+17  git push -u origin BR_Q2 
+18  git checkout main
+19  git merge BR_Q2 
+20  git push
+21  cd Work/Q2
+22  cp plant.py plant-improved.py
+23  source venv/bin/activate
+24  python plant-improved.py --plant "Rose" --height 50 55 60 65 70 --leaf_count 35 40 45 50 55 --dry_weight 2.0 2.0 2.1 2.1 3.0
+25  pip freeze > requirements.txt
+26  pip uninstall matplotlib
+27  pip install -r requirements.txt 
+28  python plant-improved.py --plant "Rose" --height 7 69 420 100 123 --leaf_count 2 77 99 23 1 --dry_weight 5.0 6.9 1.111112 8.9 1.2
+29  mkdir Diagrams_2
+30  mv *.png Diagrams_2
+31  tar -czvf "../../BACKUPS/diagrams_2_$(date +"%Y-%m-%d_%H-%M-%S").tar.gz" Diagrams_2/*.png
+32  history >> history.log
