@@ -1,0 +1,17 @@
+  1  git pull
+  2  git branch
+  3  git branch -a
+  4  git checkout -b BR_Q3
+  5  cd ../Q3
+  6  touch menu.sh
+  7  git checkout -b BR_CSV
+  8  nano menu.sh 
+  9  chmod +x menu.sh 
+ 10  ./menu.sh 
+ 11  python3 --version
+ 12  ./menu.sh 
+ 13  sudo apt install pip
+ 14  pip install matplotlib
+ 15  sudo apt install python3-matplotlib
+ 16  ./menu.sh 
+ 17  history > history.log
