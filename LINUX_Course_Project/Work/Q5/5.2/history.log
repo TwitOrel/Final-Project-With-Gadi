@@ -1,0 +1,21 @@
+ 1  ls -l /mnt/c/Users/Orel/SharedDocker/
+ 2  mkdir LINUX_Course_Project/Work/Q5
+ 3  mv /mnt/c/Users/Orel/SharedDocker/* /mnt/c/Users/Orel/Desktop/projects/gadiShor/final\ Project/LINUX_Course_Project/Work/Q5
+ 4  git add .
+ 5  git commit -m "5.1"
+ 6  git branch
+ 7  git push -u origin BR_Q5
+ 8  git checkout main
+ 9  git merge BR_Q5
+10  git push
+11  git checkout BR_Q5
+12  mkdir LINUX_Course_Project/Work/Q5/5.2
+13  cd ./LINUX_Course_Project/Work/Q5/5.2/
+14  touch Dockerfile
+15  nano Dockerfile
+16  docker build -t my_python_container .
+17  docker run -it --rm -v "$(pwd)":/app my_python_container /bin/bash
+18  docker run -it --rm -v "$(pwd)":/app --entrypoint /bin/bash my_python_container
+19  docker run -it -v "$(pwd)":/app my_python_container --plant "Rose" --height 50 55 60 65 70 --leaf_count 35 40 45 50 55 --dry_weight 2.0 2.0 2.1 2.1 3.0
+20  history
+21  history > history.log
