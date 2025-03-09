@@ -52,30 +52,19 @@ run_python_analysis() {
     echo "Enter the plant name:"
     read plant_name
 
-    # קריאת הנתונים מהקובץ CSV עבור הצמח הנתון
     data=$(awk -F',' -v plant="$plant_name" '$1 == plant {print $2","$3","$4}' "$CSV_FILE")
-    echo data: ${data}
 
     if [ -z "$data" ]; then
         echo "Plant not found in CSV file."
         return
     fi
 
-    # ניקוי הנתונים - הסרת גרשיים ותווי רווח עודפים
     clean_data=$(echo "$data" | tr -d '"' | tr -d '\r')
 
-    # חילוץ הנתונים למשתנים נפרדים
     heights=$(echo "$clean_data" | cut -d',' -f1)
     leaf_counts=$(echo "$clean_data" | cut -d',' -f2)
     dry_weights=$(echo "$clean_data" | cut -d',' -f3)
 
-    # הדפסת הנתונים לוודא תקינות
-    echo "Extracted Data:"
-    echo "Height: $heights"
-    echo "Leaf Count: $leaf_counts"
-    echo "Dry Weight: $dry_weights"
-
-    # הפעלת הסקריפט עם הנתונים מה-CSV בפורמט הנכון
     python3 ../Q2/plant-improved.py --plant "$plant_name" --height $heights --leaf_count $leaf_counts --dry_weight $dry_weights
 }
 

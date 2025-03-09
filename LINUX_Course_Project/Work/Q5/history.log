@@ -1,0 +1,45 @@
+    1  apt update && apt install -y nano
+    2  nano plant.py
+    3  ls
+    4  cat plant.py 
+    5  python3 plant.py
+    6  apt update
+    7  apt install -y python3 python3-pip
+    8  pip3 install metplotlib
+    9  sudo apt install python3-matplotlib
+   10  apt install python3-matplotlib
+   11  python3 plant.py
+   12  ls
+   13  apt install -y imagemagick
+   14  ls
+   15  convert *.png +append final_image.jpg
+   16  ls
+   17  docker cp first_container:/root/final_image.png /mnt/c/Users/Orel/Desktop/
+   18  docker cp first_container:/root/final_image.png /mnt/c/Users/Orel/Desktop/pwd
+   19  history
+   20  history > history.log
+   21  cat history.log 
+   22  exit
+   23  cp /final_image.jpg /flipped.jpg /history.log /shared_folder/
+   24  ls
+   25  convert /final_image.jpg -flip /flipped.jpg
+   26  cp /final_image.jpg /flipped.jpg /history.log /shared_folder/
+   27  cat shared_folder/
+   28  ls shared_folder/
+   29  ls -l *.jpg
+   30  ls
+   31  ls -l *.png
+   32  convert flipped.jpg final_image.jpg +append reversed_combined.png
+   33  ls
+   34  rm reversed_combined.png 
+   35  ls
+   36  rm flipped.jpg 
+   37  rn final_image.jpg 
+   38  rm final_image.jpg 
+   39  ls
+   40  convert ROSE_*.png +append final_image.jpg
+   41  convert *.png +append final_image.jpg
+   42  ls
+   43  convert $(ls -r *.png) +append final_image_reversed.jpg
+   44  ls
+   45  history > history.log
