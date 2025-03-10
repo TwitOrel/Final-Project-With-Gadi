@@ -1,11 +1,14 @@
-FROM openjdk:11-jdk
+# השתמש בבסיס של OpenJDK
+FROM openjdk:17
 
-RUN apt-get update && apt-get install -y imagemagick
-
+# הגדר תיקיית עבודה בתוך הקונטיינר
 WORKDIR /app
 
-COPY Watermark.java .
+# העתק את קובץ ה-Java לקונטיינר
+COPY WaterMark.java .
 
-RUN javac Watermark.java
+# קומפילציה של הקובץ
+RUN javac WaterMark.java
 
-ENTRYPOINT ["java", "-cp", "/app", "Watermark"]
+# הפעלת הקוד עם נתיב ברירת מחדל (אפשר לשנות)
+ENTRYPOINT ["java", "WaterMark"]
