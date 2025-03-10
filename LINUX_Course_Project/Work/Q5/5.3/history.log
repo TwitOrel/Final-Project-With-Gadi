@@ -1,0 +1,9 @@
+
+  1  touch watermark.java
+  2  docker build -t watermark-app .
+  3  docker run --rm -v "$(realpath ../5.2):/images" watermark-app /images
+  4  touch q5.sh
+  5  cd ../5.2
+  6  chmod 755 q5.sh 
+  7  ./q5.sh 
+  8  history >> history.log 
