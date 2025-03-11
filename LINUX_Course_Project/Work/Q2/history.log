@@ -1,12 +1,12 @@
-1  git checkout -b BR_Q2
-2  cd LINUX_Course_Project/
-3  mkdir Work/Q2/ -p
-4  cp CODE/plant.py Work/Q2/
-5  cd Work/Q2
-6  python -m venv venv
-7  source ./venv/bin/activate
-8  pip install matplotlib
-9  python plant.py 
+ 1  git checkout -b BR_Q2
+ 2  cd LINUX_Course_Project/
+ 3  mkdir Work/Q2/ -p
+ 4  cp CODE/plant.py Work/Q2/
+ 5  cd Work/Q2
+ 6  python -m venv venv
+ 7  source ./venv/bin/activate
+ 8  pip install matplotlib
+ 9  python plant.py
 10  mkdir Diagrams_1
 11  mv Rose* Diagrams_1/
 12  mkdir ../../BACKUPS
