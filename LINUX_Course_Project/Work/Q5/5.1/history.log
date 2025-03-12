@@ -1,45 +1,258 @@
-    1  apt update && apt install -y nano
-    2  nano plant.py
-    3  ls
-    4  cat plant.py 
-    5  python3 plant.py
-    6  apt update
-    7  apt install -y python3 python3-pip
-    8  pip3 install metplotlib
-    9  sudo apt install python3-matplotlib
-   10  apt install python3-matplotlib
-   11  python3 plant.py
-   12  ls
-   13  apt install -y imagemagick
-   14  ls
-   15  convert *.png +append final_image.jpg
-   16  ls
-   17  docker cp first_container:/root/final_image.png /mnt/c/Users/Orel/Desktop/
-   18  docker cp first_container:/root/final_image.png /mnt/c/Users/Orel/Desktop/pwd
-   19  history
-   20  history > history.log
-   21  cat history.log 
-   22  exit
-   23  cp /final_image.jpg /flipped.jpg /history.log /shared_folder/
-   24  ls
-   25  convert /final_image.jpg -flip /flipped.jpg
-   26  cp /final_image.jpg /flipped.jpg /history.log /shared_folder/
-   27  cat shared_folder/
-   28  ls shared_folder/
-   29  ls -l *.jpg
-   30  ls
-   31  ls -l *.png
-   32  convert flipped.jpg final_image.jpg +append reversed_combined.png
-   33  ls
-   34  rm reversed_combined.png 
-   35  ls
-   36  rm flipped.jpg 
-   37  rn final_image.jpg 
-   38  rm final_image.jpg 
-   39  ls
-   40  convert ROSE_*.png +append final_image.jpg
-   41  convert *.png +append final_image.jpg
-   42  ls
-   43  convert $(ls -r *.png) +append final_image_reversed.jpg
-   44  ls
-   45  history > history.log
+    1  ls -l /mnt/c/Users/Orel/SharedDocker/
+    2  mv /mnt/c/Users/Orel/SharedDocker/* /mnt/c/Users/Orel/Desktop/projects/gadiShor/final\ Project/LINUX_Course_Project/Q5
+    3  mkdir LINUX_Course_Project/Work/Q5
+    4  mv /mnt/c/Users/Orel/SharedDocker/* /mnt/c/Users/Orel/Desktop/projects/gadiShor/final\ Project/LINUX_Course_Project/Work/Q5
+    5  git add .
+    6  git commit -m "5.1"
+    7  git branch
+    8  git push -u origin BR_Q5
+    9  git checkout main 
+   10  git merge BR_Q5
+   11  git push
+   12  git checkout BR_Q5
+   13  mkdir LINUX_Course_Project/Work/Q5/5.2
+   14  cd ./LINUX_Course_Project/Work/Q5/5.2/
+   15  touch Dockerfile
+   16  nano Dockerfile 
+   17  docker build -t my_python_container .
+   18  ts/gadiShor/final Project/LINUX_Course_Project/Work/Q5/5.2
+   19  cd "/mnt/c/Users/Orel/Desktop/projects/gadiShor/final Project/LINUX_Course_Project/Work/Q5/5.2"
+   20  pwd
+   21  docker build -t my_python_container .
+   22  cp ../../Q2/plant-improved.py .
+   23  cp ../../Q2/requirements.txt .
+   24  docker build -t my_python_container .
+   25  docker image
+   26  docker images
+   27  docker run -it my_python_container --plant "Rose" --height 50 55 60 65 70 --leaf_count 35 40 45 50 55 --dry_weight 2.0 2.0 2.1 2.1 3.0
+   28  docker ps -a
+   29  docker run -it -v $(pwd):/app my_python_container --plant "Rose" --height 50 55 60 65 70 --leaf_count 35 40 45 50 55 --dry_weight 2.0 2.0 2.1 2.1 3.0
+   30  docker build -t my_python_container .
+   31  docker run -it -v $(pwd):/workspace my_python_container --plant "Rose" --height 50 55 60 65 70 --leaf_count 35 40 45 50 55 --dry_weight 2.0 2.0 2.1 2.1 3.0
+   32  docker build -t my_python_container .
+   33  docker run -it -v "/mnt/c/Users/Orel/Desktop/projects/gadiShor/final_project/Linux_course_project/work/q5/5_2":/workspace my_python_container ...
+   34  docker run -it my_python_container --plant "Rose" --height 50 55 60 65 70 --leaf_count 35 40 45 50 55 --dry_weight 2.0 2.0 2.1 2.1 3.0
+   35  docker ps -a
+   36  docker exec -it 536176adc118 /bin/bash
+   37  docker version
+   38  docker run -it --name first_container ubuntu /bin/bash
+   39  docker ps -a
+   40  docker commit b710761be8cd my_new_image
+   41  docker run -it --name image_edit_container my_new_image /bin/bash
+   42  docker run -it -v /mnt/c/Users/Orel/SharedDocker/:/shared_folder my_image /bin/bash
+   43  docker images
+   44  docker run -it -v /mnt/c/Users/Orel/SharedDocker/:/shared_folder my_new_image /bin/bash
+   45  mkdir -p /mnt/c/Users/Orel/SharedDocker
+   46  ls -ld /mnt/c/Users/Orel/SharedDocker/
+   47  root@e59289d3170c:/# docker run -it -v /mnt/c/Users/Orel/SharedDocker/:/shared_folder my_image /bin/bash
+   48  bash: docker: command not found
+   49  root@e59289d3170c:/#
+   50  docker run -it -v /mnt/c/Users/Orel/SharedDocker/:/shared_folder my_image /bin/bash
+   51  docker run -it -v /mnt/c/Users/Orel/SharedDocker/:/shared_folder finls -l /mnt/c/Users/Orel/SharedDocker/
+   52  cd ./LINUX_Course_Project/Work/Q5/5.2/
+   53  docker start 536176adc118
+   54  docker exec -it 536176adc118 /bin/bash
+   55  ls -l
+   56  ll
+   57  ls -l /app
+   58  docker exec -it 536176adc118 /bin/bash
+   59  docker start 536176adc118
+   60  ls
+   61  docker exec -it 536176adc118 /bin/bash
+   62  docker logs 536176adc118
+   63  docker cp 536176adc118:/app/Rose_scatter.png .
+   64  docker cp 536176adc118:/app/Rose_histogram.png .
+   65  docker cp 536176adc118:/app/Rose_line_plot.png .
+   66  xdg-open Rose_scatter.png
+   67  xdg-open Rose_histogram.png
+   68  xdg-open Rose_line_plot.png
+   69  sudo apt install xdg-utils
+   70  xdg-open Rose_scatter.png
+   71  xdg-open Rose_histogram.png
+   72  xdg-open Rose_line_plot.png
+   73  docker run -it -v $(pwd):/app my_python_container --plant "Rose" --height 50 55 60 65 70 --leaf_count 35 40 45 50 55 --dry_weight 2.0 2.0 2.1 2.1 3.0
+   74  docker images
+   75  docker run -it -v $(pwd):/app my_python_container --plant "Rose" --height 50 55 60 65 70 --leaf_count 35 40 45 50 55 --dry_weight 2.0 2.0 2.1 2.1 3.0
+   76  docker run -it -v "$(pwd)":/app my_python_container --plant "Rose" --height 50 55 60 65 70 --leaf_count 35 40 45 50 55 --dry_weight 2.0 2.0 2.1 2.1 3.0
+   77  docker run -it -v "$(pwd)":/ my_python_container --plant "Rose" --height 50 55 60 65 70 --leaf_count 35 40 45 50 55 --dry_weight 2.0 2.0 2.1 2.1 3.0
+   78  docker run -it -v "$(pwd)":/app my_python_container --plant "Rose" --height 50 55 60 65 70 --leaf_count 35 40 45 50 55 --dry_weight 2.0 2.0 2.1 2.1 3.0
+   79  docker run -it -v "$(pwd)":/app my_python_container /bin/bash
+   80  docker run -it --rm -v "$(pwd)":/app my_python_container /bin/bash
+   81  ls -l "$(pwd)"
+   82  cd ./LINUX_Course_Project/Work/Q5/5.2/
+   83  ls -l "$(pwd)"
+   84  docker run -it --rm -v "$(pwd)":/app my_python_container /bin/bash
+   85  docker run -it --rm -v "$(pwd)":/app --entrypoint /bin/bash my_python_container
+   86  docker run -it -v "$(pwd)":/app my_python_container --plant "Rose" --height 50 55 60 65 70 --leaf_count 35 40 45 50 55 --dry_weight 2.0 2.0 2.1 2.1 3.0
+   87  history
+   88  history > history.log
+   89  git add .
+   90  git status
+   91  ls
+   92  cd ..
+   93  git status
+   94  cd ..
+   95  git status
+   96  cd ..
+   97  git status
+   98  git add .
+   99  git commit -m "part two"
+  100  git status
+  101  git push -u origin BR_Q5 
+  102  git checkout main 
+  103  git merge BR_Q5 
+  104  git push
+  105  git checkout BR_Q5
+  106  cd ./LINUX_Course_Project/Work/Q5
+  107  mkdir 5.3
+  108  cd ./5.3
+  109  mkdir ../5.1
+  110  touch Dockerfile
+  111  touch watermark.java
+  112  docker build -t my_java_watermark .
+  113  mv watermark.java Watermark.java 
+  114  docker build -t my_java_watermark .
+  115  docker run -it --rm -v "$(pwd)":/app my_java_watermark /app/project.png "Orel Twito & Elad Huttner"
+  116  docker run -it --rm -v "$(pwd)":/app --entrypoint /bin/bash my_java_watermark
+  117  docker build --no-cache -t my_java_watermark .
+  118  ping -c 4 google.com
+  119  systemctl restart docker  # בלינוקס
+  120  docker build --no-cache -t my_java_watermark .
+  121  curl -L https://registry-1.docker.io/v2/
+  122  docker pull openjdk:11-jdk
+  123  docker build --no-cache -t my_java_watermark .
+  124  docker run -it --rm -v "$(pwd)":/app my_java_watermark /app/project.png "Orel Twito & Elad Huttner"
+  125  ls -l "$(pwd)/project.png"
+  126  find /mnt/c/Users/Orel/ -type f -name "project.png"
+  127  ls
+  128  cd ./Work/Q5/5.3/
+  129  javac WaterMark.java 
+  130  sudo apt install default-jdk
+  131  javac WaterMark.java 
+  132  java WaterMark ./
+  133  java WaterMark ../../../DOWNLOADS/LINUX_COURSE_WORK-downloads/
+  134  javac WaterMark.java 
+  135  java WaterMark ../../../DOWNLOADS/LINUX_COURSE_WORK-downloads/
+  136  javac WaterMark.java 
+  137  java WaterMark ../../../DOWNLOADS/LINUX_COURSE_WORK-downloads/
+  138  javac WaterMark.java 
+  139  java WaterMark ../../../DOWNLOADS/LINUX_COURSE_WORK-downloads/
+  140  javac WaterMark.java 
+  141  java WaterMark ../../../DOWNLOADS/LINUX_COURSE_WORK-downloads/
+  142  javac WaterMark.java 
+  143  java WaterMark ../../../DOWNLOADS/LINUX_COURSE_WORK-downloads/
+  144  docker images
+  145  docker image
+  146  docker images
+  147  docker rmi 99bac5bf8363
+  148  docker rmi 72297848456d
+  149  docker images
+  150  docker rmi a98bf1c9127b
+  151  docker images
+  152  docker build -t watermark-app .
+  153  docker images
+  154  docker run --rm -v ../5.2 watermark-app /images
+  155  docker run --rm -v $(pwd)/../5.2:/images watermark-app /images
+  156  docker run --rm -v "$(realpath ../5.2):/images" watermark-app /images
+  157  history > history.log
+  158  touch yosi.sh
+  159  cd ../5.2
+  160  docker images
+  161  docker rmi 052f62833280
+  162  docker ps -a
+  163  docker rm 261b5b3f18a6
+  164  docker rmi 052f62833280
+  165  docker rmi -f 052f62833280
+  166  docker images
+  167  docker build -t my_python_5.2 .
+  168  docker run -it -v "$(pwd)":/app my_python_container --plant "Rose" --height 50 55 60 65 70 --leaf_count 35 40 45 50 55 --dry_weight 2.0 2.0 2.1 2.1 3.0
+  169  docker run -it -v "$(pwd)":/app my_python_5.2 --plant "Rose" --height 50 55 60 65 70 --leaf_count 35 40 45 50 55 --dry_weight 2.0 2.0 2.1 2.1 3.0
+  170  mkdir papiSpair
+  171  mv Rose* papiSpair/
+  172  docker run -it -v "$(pwd)":/app my_python_5.2 --plant "Rose" --height 50 55 60 65 70 --leaf_count 35 40 45 50 55 --dry_weight 2.0 2.0 2.1 2.1 3.0
+  173  cd ../5.3
+  174  chmod 755 yosi.sh 
+  175  ./yosi.sh 
+  176  docker run -it -v "$(pwd)":/app my_python_5.2 --plant "Rose" --height 50 55 60 65 70 --leaf_count 35 40 45 50 55 --dry_weight 2.0 2.0 2.1 2.1 3.0
+  177  docker run -it -v "../5.2":/app my_python_5.2 --plant "Rose" --height 50 55 60 65 70 --leaf_count 35 40 45 50 55 --dry_weight 2.0 2.0 2.1 2.1 3.0
+  178  docker run -it -v "$(pwd)":/app my_python_5.2 --plant "Rose" --height 50 55 60 65 70 --leaf_count 35 40 45 50 55 --dry_weight 2.0 2.0 2.1 2.1 3.0
+  179  cd ../5.3
+  180  ./yosi.sh 
+  181  docker images
+  182  ./yosi.sh 
+  183  docker images
+  184  ./yosi.sh 
+  185  git branch
+  186  git checkout BR_Q5
+  187  history >> history.log 
+  188  mv yosi.sh q5.sh
+  189  git status
+  190  git add .
+  191  git commit -m "finish taskgit add ."
+  192  git push -u origin BR_Q5
+  193  git checkout main 
+  194  git merge BR_Q5
+  195  git push
+  196  ./q5
+  197  ls
+  198  ./q5.sh 
+  199  git branch
+  200  git checkout BR_Q5
+  201  ls
+  202  ./q5.sh 
+  203  git add .
+  204  git commit -m "fix bug"
+  205  git push -u origin BR_Q5
+  206  ./q5
+  207  ./q5.sh 
+  208  git checkout main 
+  209  git merge BR_Q5
+  210  ./q5.sh 
+  211  git push
+  212  ls
+  213  pwd
+  214  cd ./Work/Q5/5.1
+  215  ls
+  216  docker run -it --name 5.1_container ubuntu bash
+  217  docker images
+  218  docker ps -a
+  219  docker rm 5.1_container
+  220  docker ps -a
+  221  docker run -it --name 5.1_container python:3.9 bash
+  222  docker cp plant.py 5.1_container:/root/
+  223  docker exec -it 5.1_container bash
+  224  docker ps -a
+  225  docker start -ai 5.1_container
+  226  docker cp 5.1_container:/root/output.jpg .
+  227  docker cp 5.1_container:/root/merged_reversed.jpg .
+  228  docker cp 5.1_container:/root/history.log .
+  229  docker start -ai 5.1_container
+  230  docker cp 5.1_container:/root/merged_reversed.png .
+  231  docker exec 5.1_container tar -cvf - -C /root output.jpg merged_reversed.jpg history.log | tar -xvf -
+  232  docker start 5.1_container
+  233  docker exec 5.1_container tar -cvf - -C /root output.jpg merged_reversed.jpg history.log | tar -xvf -
+  234  docker exec 5.1_container tar -cvf - -C /root output.jpg merged_reversed.png history.log | tar -xvf -
+  235  docker start 5.1_container
+  236  docker exec 5.1_container tar -cvf - -C /root output.jpg merged_reversed.png history.log | tar -xvf -
+  237  history > history.log
+  238  pwd
+  239  cd ./Work/Q5/5.1
+  240  docker run -it --name 5.1_container python:3.9 bash
+  241  apt update && install -y nano
+  242  nano test.txt
+  243  exit
+  244  cd ./Work/Q5/5.1
+  245  docker cp plant.py 5.1_container:/root/
+  246  docker start -ai 5.1_container
+  247  docker cp 5.1_container:/root/output.jpg .
+  248  docker cp 5.1_container:/root/merged_reversed.jpg .
+  249  docker cp 5.1_container:/root/history.log .
+  250  docker start -ai 5.1_container
+  251  docker cp 5.1_container:/root/merged_reversed.jpg .
+  252  docker cp 5.1_container:/root/output.jpg .
+  253  docker start -ai 5.1_container
+  254  docker cp 5.1_container:/root/output.jpg .
+  255  docker cp 5.1_container:/root/merged_reversed.jpg .
+  256  docker start 5.1_container
+  257  docker exec 5.1_container tar -cvf - -C /root output.jpg merged_reversed.jpg history.log | tar -xvf -
+  258  history > history.log

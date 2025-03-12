@@ -49,7 +49,7 @@ cleanup() {
 run_container() {
     cd ../5.2
     echo "🚀 Running Docker container: $image_name..."
-    docker run -it -v "$(pwd)":/app my_python_5.2 --plant "Rose" --height 50 55 60 65 70 --leaf_count 35 40 45 50 55 --dry_weight 2.0 2.0 2.1 2.1 3.0
+    docker run -it -v "$(pwd)":/app $IMAGE_5_2 --plant "Rose" --height 50 55 60 65 70 --leaf_count 35 40 45 50 55 --dry_weight 2.0 2.0 2.1 2.1 3.0
     if [ $? -ne 0 ]; then
         echo "❌ Docker container $image_name failed. Exiting..."
         exit 1
@@ -58,6 +58,7 @@ run_container() {
 }
 
 # Build Dockers
+
 build_docker "$CONTAINER_5_2_IMAGE" "$IMAGE_5_2"
 build_docker "$CONTAINER_5_3_IMAGE" "$IMAGE_5_3"
 
